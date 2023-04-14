@@ -1,3 +1,14 @@
+export const fetchLoggedUser = () => {
+  const user = {
+    fullName: 'Ricardo da Silva Girardi',
+    accountId: '4003bad7-5a21-40cd-a936-1dd1a1c9f35c',
+    email: 'me@girardiricardo.dev',
+    balance: 18230
+  }
+  
+  return user;
+}
+
 export const fetchFootballOdds = async () => {
   const odds = [];
   const teams = uefaTeams;
