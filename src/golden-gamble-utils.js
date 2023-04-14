@@ -76,3 +76,20 @@ export const theme = {
     },
   }
 }
+
+export const ADD_BET = '@golden-gamble/bet/add';
+export const REMOVE_BET = '@golden-gamble/bet/remove';
+export const MY_BETS_DRAWER = '@golden-gamble/my-bets';
+
+export const subscribeEvent = (eventName, listener) => {
+  addEventListener(eventName, listener);
+}
+
+export const unsubscribeEvent = (eventName, listener) => {
+  removeEventListener(eventName, listener);
+}
+
+export const publishEvent = (eventName, data) => {
+  const event = new CustomEvent(eventName, { detail: data });
+  dispatchEvent(event);
+}
